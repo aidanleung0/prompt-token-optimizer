@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: prompt-token-optimizer-api
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11
+    healthCheckPath: /health
+    autoDeploy: true 
